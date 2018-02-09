@@ -1,7 +1,7 @@
 <template lang="html">
     <!--上面一个标题 下面自定义内容的组件-->
     <section :class="[panelClass,cname]">
-        <h4>--{{title}}--</h4>
+        <h4>-{{title}}-</h4>
         <div>
             <slot></slot>
         </div>

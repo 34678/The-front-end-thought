@@ -3,6 +3,8 @@
         <heador></heador>
         <h-slider></h-slider>
         <novice></novice>
+        <borrow></borrow>
+        <money></money>
     </div>
 </template>
 
@@ -10,12 +12,16 @@
   import Heador from '../public/header'
   import HSlider from '../home/hslider'
   import Novice from '../home/novice'
+  import Borrow from '../home/borrow'
+  import Money from '../home/money'
 
   export default {
     components: {
       Heador,
       HSlider,
-      Novice
+      Novice,
+      Borrow,
+      Money
     }
   }
 </script>
