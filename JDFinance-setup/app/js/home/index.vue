@@ -2,17 +2,20 @@
     <div>
         <heador></heador>
         <h-slider></h-slider>
+        <novice></novice>
     </div>
 </template>
 
 <script>
   import Heador from '../public/header'
   import HSlider from '../home/hslider'
+  import Novice from '../home/novice'
 
   export default {
     components: {
       Heador,
-      HSlider
+      HSlider,
+      Novice
     }
   }
 </script>

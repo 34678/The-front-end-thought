@@ -27,7 +27,7 @@
     }
   }
 </script>
-<style lang="css">
+<style lang="scss">
     @import "../../css/element.scss";
 
     .panel {
