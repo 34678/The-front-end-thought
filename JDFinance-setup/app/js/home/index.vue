@@ -1,11 +1,17 @@
 <template lang="html">
-    <div :class="$style.home">
-        <h1>Home</h1>
+    <div>
+        <heador></heador>
     </div>
 </template>
 
 <script>
-  export default {}
+  import Heador from '../public/header'
+
+  export default {
+    components: {
+      Heador
+    }
+  }
 </script>
 
 <style lang="scss" module>

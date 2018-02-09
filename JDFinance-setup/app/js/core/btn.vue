@@ -20,9 +20,9 @@
     }
   }
 </script>
-<style lang="css">
+<style lang="scss">
     /*这里使用sass的btn样式*/
-    @import "../css/element.scss";
+    @import "../../css/element.scss";
     .btn {
       @include btn
     }
