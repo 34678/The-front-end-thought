@@ -1,15 +1,18 @@
 <template lang="html">
     <div>
         <heador></heador>
+        <h-slider></h-slider>
     </div>
 </template>
 
 <script>
   import Heador from '../public/header'
+  import HSlider from '../home/hslider'
 
   export default {
     components: {
-      Heador
+      Heador,
+      HSlider
     }
   }
 </script>

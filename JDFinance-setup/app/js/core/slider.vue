@@ -7,7 +7,7 @@
                         <img :src="item.src" alt="">
                     </router-link>
                 </swiper-slide>
-                <div class="swiper-pagination" vif="options.pagination"></div>
+                <div class="swiper-pagination" v-if="options.pagination" slot="pagination"></div>
             </swiper>
         </section>
     </div>
@@ -32,14 +32,14 @@
           return {
             autoplay: true,
             loop: true,
-            pegination: {
-              el: '.swiper-pagination',
+            pagination: {
+              el: '.swiper-pagination'
             },
-            notNextTick: false
+            noNextTick: false
           }
         }
       },
-      item: {
+      items: {
         type: Array,
         default() {
           return []
