@@ -22,7 +22,7 @@
     },
     data() {
       return {
-        panelClass: 'btn'
+        panelClass: 'panel'
       }
     }
   }

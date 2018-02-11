@@ -5,6 +5,8 @@
         <novice></novice>
         <borrow></borrow>
         <money></money>
+        <product></product>
+        <life></life>
     </div>
 </template>
 
@@ -14,6 +16,8 @@
   import Novice from '../home/novice'
   import Borrow from '../home/borrow'
   import Money from '../home/money'
+  import Life from '../home/life'
+  import Product from '../home/product'
 
   export default {
     components: {
@@ -21,16 +25,13 @@
       HSlider,
       Novice,
       Borrow,
-      Money
+      Money,
+      Life,
+      Product
     }
   }
 </script>
 
 <style lang="scss" module>
     @import '../../css/reset.scss';
-
-    .home {
-        color: blue;
-        font-size: 80px;
-    }
 </style>
