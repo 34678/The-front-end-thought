@@ -1,62 +1,61 @@
-<template>
-    <panel title="生活服务" :class="$style.panel">
-        <ul :class="$style.content">
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t4375/104/1184122472/3976/89741da4/58be8a6eNf10193d0.png?width=135&height=135" alt="">
-                <p>惠加油</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t4747/185/1901740991/5892/1383fb93/58f57851N17ee6993.jpg?width=132&height=132" alt="">
-                <p>小白信用</p>
-                <p>全新升级</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t3241/234/8044685271/3713/7b29f77f/58be89c8Nb9d41295.png?width=135&height=135" alt="">
-                <p>信用卡还款</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t3172/259/7993557249/4351/fd082707/58be8a81Nd7716a06.png?width=135&height=135" alt="">
-                <p>卡转让</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t3085/320/8107659086/4344/cdbba2dd/58be8acfNdadcaf00.png?width=135&height=135" alt="">
-                <p>定期还款</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t3085/320/8107659086/4344/cdbba2dd/58be8acfNdadcaf00.png?width=135&height=135" alt="">
-                <p>定期还款</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t3085/320/8107659086/4344/cdbba2dd/58be8acfNdadcaf00.png?width=135&height=135" alt="">
-                <p>定期还款</p>
-            </li>
-            <li :class="$style.item">
-                <img src="//img12.360buyimg.com/jrpmobile/jfs/t3085/320/8107659086/4344/cdbba2dd/58be8acfNdadcaf00.png?width=135&height=135" alt="">
-                <p>定期还款</p>
-            </li>
-        </ul>
-    </panel>
+<template lang='html'>
+    <Panel title='更多服务' :class='$style.panel'>
+        <section :class='$style.content'>
+            <div :class='$style.item' v-for='item in items' :key='item.img'>
+                <img :src='item.img' alt=''>
+                <p>{{ item.text }}</p>
+            </div>
+        </section>
+    </Panel>
 </template>
 
 <script>
   import Panel from '../core/panel.vue'
-
   export default {
     components: {
-      Panel
-    }
+      Panel,
+    },
+    data() {
+      return {
+        items: [{
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t4609/245/3975151339/11019/766e751d/590aca78Nf15a7947.png?width=135&height=135',
+          text: '小白卡',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t5269/224/1031852465/12646/40e0f799/590aca55N22a6f274.png?width=135&height=135',
+          text: '白条商城',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t5095/216/1045040184/12370/564ae632/590ac7deN9a0eac2a.png?width=135&height=135',
+          text: '消费分期',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t8311/300/1385281399/9501/130a0046/59b8da06N14f62cf3.png?width=120&height=120',
+          text: '借钱',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t5488/298/1036263348/12073/b4f4de97/590ac8e8Ne9def22e.png?width=135&height=135',
+          text: '白条提额',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t4417/98/4154366136/13785/5433ca92/590ac8afN5dd91d6e.png?width=135&height=135',
+          text: '白条闪付',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t4453/75/4132459214/14188/939b7f34/590ac860N752d5738.png?width=135&height=135',
+          text: '小白会玩',
+        }, {
+          img: '//img12.360buyimg.com/jrpmobile/jfs/t5371/323/1038197138/12031/3ec72f6c/590aca20N089fd34a.png?width=135&height=135',
+          text: '钢镚',
+        }],
+      }
+    },
   }
 </script>
 
-<style lang="scss" module>
-    @import "../../css/element.scss";
+<style lang='scss' module>
+    @import '../../css/element.scss';
     .panel{
         @include panel;
         .content{
             @include flex(row);
-            justify-content: space-around;
             .item{
-                width: 160px;
+                /*这里不知道为啥标题变成633.99而不是640 导致三个就换行了所以没有用设计图的width*/
+                width: 25%;
                 height: 144px;
                 text-align: center;
                 margin-bottom: 40px;
