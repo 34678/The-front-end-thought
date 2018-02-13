@@ -87,6 +87,7 @@
                 display:block;
             }
             .item {
+                /*这里使用的宽度不是设计图的2倍的原因是 panel组件有个margin 导致section的宽度比设计图小一点点*/
                 > img {
                     display: block;
                     width: 100%;

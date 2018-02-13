@@ -5,7 +5,7 @@
 <daily></daily>
         <in></in>
         <more></more>
-        <footor ></footor>
+        <footor cname="mfooter"></footor>
         <navbar></navbar>
     </div>
 </template>
@@ -30,5 +30,13 @@
     }
   }
 </script>
-
-b
+<style lang="scss">
+    .mfooter{
+        margin-top: 0!important;
+        ul{
+            li:first-child{
+                display: none;
+            }
+        }
+    }
+</style>
